@@ -3,6 +3,9 @@ const serverless = require('serverless-http');
 
 module.exports = serverless(app);
 
+const cors = require('cors');
+app.use(cors())
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Algo deu errado!');
@@ -10,8 +13,6 @@ app.use((err, req, res, next) => {
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'API online',
-    availableEndpoints: ['/api/stations'],
     stations: [
       {
         id: '001',
