@@ -1,0 +1,31 @@
+# 👉 Diretórios de dependências
+node_modules/
+
+# 👉 Build de produção
+dist/
+
+# 👉 Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# 👉 Logs e relatórios
+*.log
+yarn-error.log
+
+# 👉 Configurações do editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 👉 Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# 👉 Cache do Vite
+.vite/
+
+# 👉 Outras pastas temporárias
+*.cache
+.cache/
