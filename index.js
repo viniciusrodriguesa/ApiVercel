@@ -1,5 +1,10 @@
-const express = require('express');
-const app = express();
+const app = require('./app');
+module.exports = app;
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Algo deu errado!');
+});
 
 app.get('/', (req, res) => {
   res.json({
