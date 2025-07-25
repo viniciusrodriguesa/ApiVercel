@@ -1,5 +1,7 @@
 const app = require('./app');
-module.exports = app;
+const serverless = require('serverless-http');
+
+module.exports = serverless(app);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
