@@ -1,6 +1,13 @@
 const express = require('express');
 const app = express();
 
+app.get('/', (req, res) => {
+  res.json({
+    message: 'API online',
+    availableEndpoints: ['/api/stations']
+  });
+});
+
 app.get('/api/stations', (req, res) => {
   res.json([
     {
